@@ -8,8 +8,7 @@ export default function Header() {
             </h1>
             <nav className="space-x-4 font-iransans">
                 <a href="#" className="text-white hover:text-blue-500 pr-10">Home</a>
-                <a href="#" className="text-white hover:text-blue-500 pr-10">About Us</a>
-                <a href="#" className="text-white hover:text-blue-500 pr-20">Contact Us</a>
+                <a href="#" className="text-white hover:text-blue-500 pr-40">Services</a>
             </nav>
         </header>
     )
