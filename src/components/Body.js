@@ -1,9 +1,7 @@
-import React from 'react';
-
 export default function Body() {
     return (
         <main className="relative w-full overflow-hidden">
-            <div className="relative w-full h-[700px] bg-white">
+            <div className="relative w-full bg-white">
                 <div className="absolute inset-0 z-0">
                     <svg
                         id="wave"
@@ -27,7 +25,7 @@ export default function Body() {
                     </svg>
                 </div>
 
-                <section className="relative z-20 p-16 max-w-xl">
+                <section className="relative z-20 px-6 pt-32 pb-[100px] max-w-xl">
                     <h2 className="text-3xl font-semibold text-white">Hello, I Am</h2>
                     <h2 className="text-3xl font-semibold text-white">Mohammad Hossein</h2>
                     <h2 className="text-3xl font-semibold mb-6 text-white">Dadgostar Nejhad</h2>
