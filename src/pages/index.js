@@ -1,5 +1,6 @@
 import Body from '@/components/Body'
 import Header from '@/components/Header'
+import InfoCard from '@/components/InfoCard'
 import Head from 'next/head'
 import React from 'react'
 
@@ -15,6 +16,7 @@ export default function index() {
       </Head>
       <Header />
       <Body />
+      <InfoCard />
 
     </div>
   )

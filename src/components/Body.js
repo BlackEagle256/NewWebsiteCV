@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Body() {
     return (
         <main className="relative w-full overflow-hidden">
@@ -33,6 +35,18 @@ export default function Body() {
                         A FrontEnd Developer with over 3 years of experience in designing and implementing modern user interfaces.
                     </p>
                 </section>
+
+                <div className="relative z-30 flex justify-end -mt-64 mb-8 px-52">
+                    <div className="bg-white p-6 rounded-xl flex flex-col items-center">
+                        <Image
+                            src="/Prof.jpg"
+                            alt="عکس محمد"
+                            width={200}
+                            height={200}
+                            className="rounded-full border-4"
+                        />
+                    </div>
+                </div>
             </div>
         </main>
     );
