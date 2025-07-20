@@ -27,7 +27,7 @@ export default function Body() {
                     </svg>
                 </div>
 
-                <section className="relative z-20 px-6 pt-32 pb-[100px] max-w-xl">
+                <section className="relative z-20 px-16 pt-32 pb-[100px] max-w-xl">
                     <h2 className="text-3xl font-semibold text-white">Hello, I Am</h2>
                     <h2 className="text-3xl font-semibold text-white">Mohammad Hossein</h2>
                     <h2 className="text-3xl font-semibold mb-6 text-white">Dadgostar Nejhad</h2>
@@ -36,13 +36,15 @@ export default function Body() {
                     </p>
                 </section>
 
-                <div className="relative z-30 flex justify-end -mt-64 mb-8 px-52">
-                    <div className="bg-white p-6 rounded-xl flex flex-col items-center">
+                <div className="relative z-30 flex justify-end -mt-64 mb-8"
+                    style={{padding:"0 50px"}}
+                >
+                    <div className="bg-inherit p-6 rounded-xl flex flex-col items-center">
                         <Image
                             src="/Prof.jpg"
                             alt="عکس محمد"
-                            width={200}
-                            height={200}
+                            width={400}
+                            height={400}
                             className="rounded-full border-4"
                         />
                     </div>

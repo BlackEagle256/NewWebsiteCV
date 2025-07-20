@@ -1,12 +1,12 @@
-import Body from '@/components/Body'
+import TopBody from '@/components/TopBody'
 import Header from '@/components/Header'
-import InfoCard from '@/components/InfoCard'
+import CenterBody from '@/components/CenterBody'
 import Head from 'next/head'
 import React from 'react'
 
 export default function index() {
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800 font-sans">
+    <div className="min-h-screen bg-white text-gray-800 font-sans">
       <Head>
         <title>خانه | سایت من</title>
         <meta name="description" content="این صفحه اصلی سایت Next.js ماست" />
@@ -15,8 +15,8 @@ export default function index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Body />
-      <InfoCard />
+      <TopBody />
+      <CenterBody />
 
     </div>
   )
