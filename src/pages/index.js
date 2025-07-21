@@ -1,6 +1,7 @@
 import TopBody from '@/components/TopBody'
 import Header from '@/components/Header'
 import CenterBody from '@/components/CenterBody'
+import BottomBody from '@/components/BottomBody'
 import Head from 'next/head'
 import React from 'react'
 
@@ -17,7 +18,7 @@ export default function index() {
       <Header />
       <TopBody />
       <CenterBody />
-
+      <BottomBody/>
     </div>
   )
 }

@@ -39,7 +39,7 @@ export default function Body() {
                 <div className="relative z-30 flex justify-end -mt-64 mb-8"
                     style={{padding:"0 50px"}}
                 >
-                    <div className="bg-inherit p-6 rounded-xl flex flex-col items-center">
+                    <div className="bg-inherit px-6 rounded-xl flex flex-col items-center">
                         <Image
                             src="/Prof.jpg"
                             alt="عکس محمد"
