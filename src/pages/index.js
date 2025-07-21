@@ -4,6 +4,7 @@ import CenterBody from '@/components/CenterBody'
 import BottomBody from '@/components/BottomBody'
 import Head from 'next/head'
 import React from 'react'
+import AccessMe from '@/components/AccessMe'
 
 export default function index() {
   return (
@@ -19,6 +20,7 @@ export default function index() {
       <TopBody />
       <CenterBody />
       <BottomBody/>
+      <AccessMe/>
     </div>
   )
 }
