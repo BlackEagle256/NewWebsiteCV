@@ -6,8 +6,8 @@ export default function CenterBody() {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white text-gray-800 font-sans flex items-center justify-center">
-      <main className="p-8 w-full max-w-7xl">
+    <div className="min-h-screen bg-white text-gray-800 font-sans flex items-center justify-center mt-[-50px]">
+      <main className="p-16 w-full max-w-7xl">
         <section className="bg-white rounded-xl shadow-top flex overflow-hidden">
           <div className="w-2/6">
             <Image
