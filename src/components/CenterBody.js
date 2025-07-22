@@ -11,7 +11,7 @@ export default function CenterBody() {
         <section className="bg-white rounded-xl shadow-lg flex flex-col md:flex-row overflow-hidden">
           <div className="w-full md:w-2/6 h-[300px] md:h-auto">
             <Image
-              src="/Prof1.jpg"
+              src="/Prof3.png"
               alt="user Avatar"
               width={300}
               height={300}

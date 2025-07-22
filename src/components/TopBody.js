@@ -39,7 +39,7 @@ export default function Body() {
                 <div className="absolute z-20 bottom-0 right-[5%] w-[280px] md:w-[320px] lg:w-[360px] xl:w-[400px] 2xl:w-[420px] 2xl:mr-10">
                     <div className="relative aspect-square w-full">
                         <Image
-                            src="/Prof.jpg"
+                            src="/Prof2.png"
                             alt="عکس محمد"
                             fill
                             className="rounded-full border-4 border-white object-cover"
@@ -51,7 +51,7 @@ export default function Body() {
             <div className="md:hidden flex flex-col items-center pt-12 pb-16 px-6">
                 <div className="relative w-[200px] h-[200px] mb-8">
                     <Image
-                        src="/Prof.jpg"
+                        src="/Prof2.png"
                         alt="عکس محمد"
                         fill
                         className="rounded-full border-4 border-orangeCustom object-cover"
