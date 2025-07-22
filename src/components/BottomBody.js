@@ -32,7 +32,7 @@ export default function BottonBody() {
 
   return (
     <Box className="w-full px-4 sm:px-8 lg:px-16 py-12 mt-[-50px]">
-      <section className="flex flex-col lg:flex-row gap-16 max-w-7xl mx-auto">
+      <section className="flex flex-col lg:flex-row gap-16 max-w-7xl mx-auto items-center">
         <Box className="flex-1 bg-white rounded-lg p-8">
           <h2 className="flex items-center text-3xl font-bold mb-8 text-gray-900">
             <i className="fas fa-briefcase mr-4 text-orange-500"></i>

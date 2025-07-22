@@ -60,12 +60,16 @@ export default function AccessMe() {
 
                 <div className="flex flex-col space-y-3 text-left min-w-[300px]">
                     <h3 className="text-xl font-bold mb-4">Contact</h3>
-                    <p>09366606536</p>
-                    <p>mohammadhoseindadgostr@gmail.com</p>
-                    <p>تهران</p>
+                    <a href="tel:09366606536">
+                        09366606536
+                    </a>
+                    <a href="mailto:Mohammadhoseindadgostr@gmail.com">
+                        Mohammadhoseindadgostr@gmail.com
+                    </a>
+                    <p>Tehran</p>
                 </div>
             </div>
-            <p class="text-center mt-10">
+            <p class="text-center mt-14">
                 <span class="en-lang">© 2025 - All Rights Reserved</span>
             </p>
         </footer>

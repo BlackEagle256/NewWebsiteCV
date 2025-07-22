@@ -2,17 +2,17 @@ import Image from 'next/image'
 
 export default function Body() {
     return (
-        <main className="relative w-full overflow-hidden">
-            <div className="relative w-full bg-white">
-                <div className="absolute inset-0 z-0">
+        <main className="relative w-full overflow-hidden bg-white">
+            <div className="hidden md:block relative w-full h-[600px]">
+                <div className="absolute inset-0 z-0 h-full w-full">
                     <svg
                         id="wave"
-                        className="rotate-180 transition duration-300"
+                        className="rotate-180 transition duration-300 w-full h-full object-cover"
                         viewBox="0 0 1440 490"
+                        preserveAspectRatio="none"
                         xmlns="http://www.w3.org/2000/svg"
                     >
                         <path
-                            className="translate-y-0 opacity-100"
                             fill="#F18519"
                             d="M0,294L60,310.3C120,327,240,359,360,343C480,327,600,261,720,204.2C840,147,960,98,
                             1080,73.5C1200,49,1320,49,1440,73.5C1560,98,1680,147,1800,204.2C1920,261,2040,327,
@@ -27,27 +27,44 @@ export default function Body() {
                     </svg>
                 </div>
 
-                <section className="relative z-20 px-16 pt-32 pb-[100px] max-w-xl">
-                    <h2 className="text-3xl font-semibold text-white">Hello, I Am</h2>
-                    <h2 className="text-3xl font-semibold text-white">Mohammad Hossein</h2>
-                    <h2 className="text-3xl font-semibold mb-6 text-white">Dadgostar Nejhad</h2>
-                    <p className="text-md text-[#FCE0C5] mt-2 w-80">
+                <section className="relative z-20 px-16 pt-28 pb-[100px] max-w-xl">
+                    <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-2">Hello, I Am</h2>
+                    <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-2">Mohammad Hossein</h2>
+                    <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-6">Dadgostar Nejhad</h2>
+                    <p className="text-lg text-[#FCE0C5] mt-2 w-80">
                         A FrontEnd Developer with over 3 years of experience in designing and implementing modern user interfaces.
                     </p>
                 </section>
 
-                <div className="relative z-30 flex justify-end -mt-64 mb-8"
-                    style={{padding:"0 50px"}}
-                >
-                    <div className="bg-inherit px-6 rounded-xl flex flex-col items-center">
+                <div className="absolute z-20 bottom-0 right-[5%] w-[280px] md:w-[320px] lg:w-[360px] xl:w-[400px] 2xl:w-[420px] 2xl:mr-10">
+                    <div className="relative aspect-square w-full">
                         <Image
                             src="/Prof.jpg"
                             alt="عکس محمد"
-                            width={400}
-                            height={400}
-                            className="rounded-full border-4"
+                            fill
+                            className="rounded-full border-4 border-white object-cover"
                         />
                     </div>
+                </div>
+            </div>
+
+            <div className="md:hidden flex flex-col items-center pt-12 pb-16 px-6">
+                <div className="relative w-[200px] h-[200px] mb-8">
+                    <Image
+                        src="/Prof.jpg"
+                        alt="عکس محمد"
+                        fill
+                        className="rounded-full border-4 border-orangeCustom object-cover"
+                    />
+                </div>
+
+                <div className="text-center">
+                    <h2 className="text-2xl font-semibold text-orangeCustom mb-2">Hello, I Am</h2>
+                    <h2 className="text-2xl font-semibold text-orangeCustom mb-2">Mohammad Hosein</h2>
+                    <h2 className="text-2xl font-semibold text-orangeCustom mb-6">Dadgostar Nejhad</h2>
+                    <p className="text-gray-600">
+                        A FrontEnd Developer with over 3 years of experience in designing and implementing modern user interfaces.
+                    </p>
                 </div>
             </div>
         </main>
