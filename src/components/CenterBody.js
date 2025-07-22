@@ -6,7 +6,7 @@ export default function CenterBody() {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white text-gray-800 font-sans flex items-center justify-center px-4 py-12 md:mt-[-100px]">
+    <div className="min-h-screen bg-white text-gray-800 font-sans flex items-center justify-center px-4 py-12 md:mt-[-100px] lg:mb-36 lg:px-16">
       <main className="w-full max-w-7xl 2xl:max-w-[1600px]">
         <section className="bg-white rounded-xl shadow-lg flex flex-col md:flex-row overflow-hidden">
           <div className="w-full md:w-2/6 h-[300px] md:h-auto">
@@ -19,12 +19,12 @@ export default function CenterBody() {
             />
           </div>
 
-          <div className="w-full md:w-4/6 px-6 sm:px-10 md:px-14 py-8 md:py-12 flex flex-col justify-center text-left">
-            <h2 className="text-2xl font-semibold">
+          <div className="w-full md:w-4/6 px-6 sm:px-10 md:px-14 lg:px-24 xl:px-32 py-8 md:py-12 flex flex-col justify-center text-left">
+            <h2 className="text-xl sm:text-2xl lg:text-xl xl:text-2xl font-semibold">
               I am Mohammad Hossein Dadgostar Nezhad,
             </h2>
 
-            <div className="mt-4 text-gray-500 space-y-4">
+            <div className="mt-4 text-gray-600 space-y-4 text-sm sm:text-base lg:text-sm xl:text-base">
               <p>
                 A frontend developer with over 3 years of experience in
                 designing and implementing modern user interfaces. My main
@@ -70,11 +70,11 @@ export default function CenterBody() {
 
             <button
               onClick={() => setShowMore(!showMore)}
-              className="mt-6 bg-orange-500 text-white px-6 py-3 rounded-xl 
+              className="mt-6 bg-orange-500 text-white px-6 py-3 rounded-xl lg:px-3 lg:py-2 lg:text-sm
                 hover:bg-orange-600 transition
                 focus:outline-none focus:ring-2 
                 focus:ring-orange-400 focus:ring-opacity-75
-                active:bg-orange-700 w-max"
+                active:bg-orange-700 w-max text-sm sm:text-base"
             >
               {showMore ? "See Less..." : "See More..."}
             </button>

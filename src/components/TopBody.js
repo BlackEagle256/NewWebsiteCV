@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Body() {
     return (
-        <main className="relative w-full overflow-hidden bg-white">
+        <main className="relative w-full overflow-hidden bg-white lg:mb-36">
             <div className="hidden md:block relative w-full h-[600px]">
                 <div className="absolute inset-0 z-0 h-full w-full">
                     <svg
@@ -36,7 +36,7 @@ export default function Body() {
                     </p>
                 </section>
 
-                <div className="absolute z-20 bottom-0 right-[5%] w-[280px] md:w-[320px] lg:w-[360px] xl:w-[400px] 2xl:w-[420px] 2xl:mr-10">
+                <div className="absolute z-20 bottom-0 right-[5%] w-[280px] md:w-[320px] lg:w-[360px] xl:w-[350px] 2xl:w-[380px] 2xl:mr-10">
                     <div className="relative aspect-square w-full">
                         <Image
                             src="/Prof2.png"

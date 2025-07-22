@@ -31,33 +31,33 @@ export default function BottonBody() {
   ];
 
   return (
-    <Box className="w-full px-4 sm:px-8 lg:px-16 py-12 mt-[-100px]">
-      <section className="flex flex-col lg:flex-row gap-16 max-w-7xl mx-auto items-center">
+    <Box className="w-full px-4 sm:px-8 lg:px-20 py-12 mt-[-100px]">
+      <section className="flex flex-col lg:flex-row gap-12 lg:gap-8 max-w-7xl mx-auto items-start">
         {/* Experience & Education */}
-        <Box className="flex-1 bg-white rounded-lg p-8">
+        <Box className="flex-1 bg-white rounded-lg p-6 lg:p-4">
           {/* Work Experience */}
-          <h2 className="flex items-center text-3xl font-bold mb-8 text-gray-900">
+          <h2 className="flex items-center text-2xl lg:text-xl font-bold mb-6 text-gray-900">
             <i className="fas fa-briefcase mr-4 text-orange-500"></i>
             <span>Work Experience</span>
           </h2>
 
-          <div className="relative pl-8 border-l-4 border-orange-500">
+          <div className="relative pl-6 border-l-4 border-orange-500">
             <div className="mb-10 relative">
-              <div className="absolute -left-5 top-1 w-4 h-4 bg-orange-500 rounded-full">
-                <div className="w-2 h-2 bg-white rounded-full absolute top-1 left-1"></div>
+              <div className="absolute -left-4 top-1 w-3 h-3 bg-orange-500 rounded-full">
+                <div className="w-1.5 h-1.5 bg-white rounded-full absolute top-[3px] left-[3px]"></div>
               </div>
 
-              <h3 className="text-xl font-semibold mb-1 text-gray-800">
+              <h3 className="text-lg lg:text-base font-semibold mb-1 text-gray-800">
                 Frontend / Fullstack Developer
               </h3>
 
-              <p className="text-gray-700 font-medium mb-1">
+              <p className="text-gray-700 text-sm mb-1">
                 Nikta Andishan Royan Co.
               </p>
 
-              <p className="text-gray-500 mb-3">2023 – Present</p>
+              <p className="text-gray-500 text-xs mb-3">2023 – Present</p>
 
-              <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
+              <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm lg:text-xs">
                 <li>Developed admin panel using React, TypeScript, and TailwindCSS.</li>
                 <li>Integrated backend services and optimized performance by 40%.</li>
                 <li>Designed and implemented role-based chat system with REST APIs.</li>
@@ -67,29 +67,28 @@ export default function BottonBody() {
           </div>
 
           {/* Education */}
-          <div className="mt-16">
-            <h2 className="flex items-center text-3xl font-bold mb-8 text-gray-900">
+          <div className="mt-12 lg:mt-10">
+            <h2 className="flex items-center text-2xl lg:text-xl font-bold mb-6 text-gray-900">
               <i className="fas fa-graduation-cap mr-4 text-orange-500"></i>
               <span>Education</span>
             </h2>
 
-            <div className="relative pl-8 border-l-4 border-orange-500">
+            <div className="relative pl-6 border-l-4 border-orange-500">
               <div className="mb-10 relative">
-                <div className="absolute -left-5 top-1 w-4 h-4 bg-orange-500 rounded-full">
-                  <div className="w-2 h-2 bg-white rounded-full absolute top-1 left-1"></div>
+                <div className="absolute -left-4 top-1 w-3 h-3 bg-orange-500 rounded-full">
+                  <div className="w-1.5 h-1.5 bg-white rounded-full absolute top-[3px] left-[3px]"></div>
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1 text-gray-800">
+                <h3 className="text-lg lg:text-base font-semibold mb-1 text-gray-800">
                   B.Sc. in Computer Engineering
                 </h3>
 
-                <p className="text-gray-700 font-medium mb-1">
+                <p className="text-gray-700 text-sm mb-1">
                   National University of Skills (Technical & Vocational), Hamadan
                 </p>
+                <p className="text-gray-500 text-xs mb-3">2021 – 2025</p>
 
-                <p className="text-gray-500 mb-3">2021 – 2025</p>
-
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 text-sm lg:text-xs">
                   Gained solid foundation in computer science, algorithms, software development, and practical problem-solving through academic projects and coursework.
                 </p>
               </div>
@@ -99,30 +98,30 @@ export default function BottonBody() {
 
         {/* Skills & Tech Stack Boxes */}
         <Box
-          className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12"
+          className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10 lg:gap-6"
           sx={{ maxWidth: 700 }}
         >
           {boxes.map(({ icon, title, content }, idx) => (
             <Box
               key={idx}
-              className="bg-white rounded-xl shadow-lg p-6 flex flex-col transition-all hover:shadow-xl"
+              className="bg-white rounded-xl shadow-md p-5 lg:p-4 flex flex-col transition-all hover:shadow-lg"
               sx={{
-                transform: idx < 2 ? "translateY(-20px)" : "none",
+                transform: idx < 2 ? "translateY(-10px)" : "none",
                 transition: "transform 0.3s ease",
               }}
             >
               <Box
-                className="text-orange-500 mb-4 flex justify-start"
-                sx={{ fontSize: 36 }}
+                className="text-orange-500 mb-3 flex justify-start"
+                sx={{ fontSize: 30 }}
               >
                 <i className={icon}></i>
               </Box>
 
-              <h3 className="text-lg font-semibold mb-2 text-gray-900">
+              <h3 className="text-base lg:text-sm font-semibold mb-2 text-gray-900">
                 {title}
               </h3>
 
-              <p className="text-sm text-gray-600">{content}</p>
+              <p className="text-sm lg:text-xs text-gray-600">{content}</p>
             </Box>
           ))}
         </Box>
