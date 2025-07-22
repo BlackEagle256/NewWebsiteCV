@@ -6,8 +6,8 @@ export default function CenterBody() {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white text-gray-800 font-sans flex items-center justify-center px-4 py-12 md:mt-[-50px]">
-      <main className="w-full max-w-7xl">
+    <div className="min-h-screen bg-white text-gray-800 font-sans flex items-center justify-center px-4 py-12 md:mt-[-100px]">
+      <main className="w-full max-w-7xl 2xl:max-w-[1600px]">
         <section className="bg-white rounded-xl shadow-lg flex flex-col md:flex-row overflow-hidden">
           <div className="w-full md:w-2/6 h-[300px] md:h-auto">
             <Image

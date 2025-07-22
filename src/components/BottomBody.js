@@ -31,9 +31,11 @@ export default function BottonBody() {
   ];
 
   return (
-    <Box className="w-full px-4 sm:px-8 lg:px-16 py-12 mt-[-50px]">
+    <Box className="w-full px-4 sm:px-8 lg:px-16 py-12 mt-[-100px]">
       <section className="flex flex-col lg:flex-row gap-16 max-w-7xl mx-auto items-center">
+        {/* Experience & Education */}
         <Box className="flex-1 bg-white rounded-lg p-8">
+          {/* Work Experience */}
           <h2 className="flex items-center text-3xl font-bold mb-8 text-gray-900">
             <i className="fas fa-briefcase mr-4 text-orange-500"></i>
             <span>Work Experience</span>
@@ -41,7 +43,9 @@ export default function BottonBody() {
 
           <div className="relative pl-8 border-l-4 border-orange-500">
             <div className="mb-10 relative">
-              <div className="absolute -left-5 top-1 w-4 h-4 bg-orange-500 rounded-full"></div>
+              <div className="absolute -left-5 top-1 w-4 h-4 bg-orange-500 rounded-full">
+                <div className="w-2 h-2 bg-white rounded-full absolute top-1 left-1"></div>
+              </div>
 
               <h3 className="text-xl font-semibold mb-1 text-gray-800">
                 Frontend / Fullstack Developer
@@ -61,8 +65,39 @@ export default function BottonBody() {
               </ul>
             </div>
           </div>
+
+          {/* Education */}
+          <div className="mt-16">
+            <h2 className="flex items-center text-3xl font-bold mb-8 text-gray-900">
+              <i className="fas fa-graduation-cap mr-4 text-orange-500"></i>
+              <span>Education</span>
+            </h2>
+
+            <div className="relative pl-8 border-l-4 border-orange-500">
+              <div className="mb-10 relative">
+                <div className="absolute -left-5 top-1 w-4 h-4 bg-orange-500 rounded-full">
+                  <div className="w-2 h-2 bg-white rounded-full absolute top-1 left-1"></div>
+                </div>
+
+                <h3 className="text-xl font-semibold mb-1 text-gray-800">
+                  B.Sc. in Computer Engineering
+                </h3>
+
+                <p className="text-gray-700 font-medium mb-1">
+                  National University of Skills (Technical & Vocational), Hamadan
+                </p>
+
+                <p className="text-gray-500 mb-3">2021 – 2025</p>
+
+                <p className="text-gray-600 text-sm">
+                  Gained solid foundation in computer science, algorithms, software development, and practical problem-solving through academic projects and coursework.
+                </p>
+              </div>
+            </div>
+          </div>
         </Box>
 
+        {/* Skills & Tech Stack Boxes */}
         <Box
           className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12"
           sx={{ maxWidth: 700 }}
