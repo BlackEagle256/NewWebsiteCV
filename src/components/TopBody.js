@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-export default function Body() {
+export default function TopBody() {
     return (
         <main className="relative w-full overflow-hidden bg-white lg:mb-36">
             <div className="hidden md:block relative w-full h-[600px]">
