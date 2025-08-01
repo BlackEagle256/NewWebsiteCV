@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useContext } from "react";
-import { LanguageContext } from "../pages/context/LanguageContext";
+import { LanguageContext } from "../context/LanguageContext";
 import clsx from "clsx";
 
 export default function BottonBody() {
@@ -72,7 +72,7 @@ export default function BottonBody() {
 
               <ul className={clsx(
                 "list-disc list-inside text-gray-600",
-                isRtl ? "space-y-2 text-sm leading-relaxed" : "space-y-1 text-sm lg:text-xs"
+                isRtl ? "space-y-2 text-sm leading-relaxed" : "space-y-1 text-sm lg:text-xs",
               )}>
                 {t.bottomBody.experienceItems.map((item, index) => (
                   <li key={index}>{item}</li>
@@ -139,7 +139,7 @@ export default function BottonBody() {
                 isRtl ? "text-right" : "text-left"
               )}
               sx={{
-                transform: idx < 2 ? "translateY(-5px)" : "none",
+                transform: (idx === 0 || idx === 2) ? "translateY(0)" : "translateY(30px)",
                 transition: "transform 0.3s ease",
                 lineHeight: 1.7,
               }}

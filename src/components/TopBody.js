@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useContext } from 'react';
-import { LanguageContext } from '../pages/context/LanguageContext';
+import { LanguageContext } from '../context/LanguageContext';
 
 export default function TopBody() {
     const { t, dir } = useContext(LanguageContext);

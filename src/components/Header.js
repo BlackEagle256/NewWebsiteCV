@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { LanguageContext } from '../pages/context/LanguageContext';
+import { LanguageContext } from '../context/LanguageContext';
 
 export default function Header() {
     const { toggleLang, t, lang } = useContext(LanguageContext);

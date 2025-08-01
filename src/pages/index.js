@@ -11,16 +11,16 @@ export default function index() {
     <div className="min-h-screen bg-white text-gray-800 font-sans">
       <Head>
         <title>خانه | سایت من</title>
-        <meta name="description" content="این صفحه اصلی سایت Next.js ماست" />
-        <meta name="keywords" content="nextjs, seo, آموزش, برنامه نویسی" />
+        <meta name="description" content="سایت رزومه ای محمدحسین دادگسترنژاد" />
+        <meta name="keywords" content="آموزش, برنامه, برنامه نویسی, seo, nextjs, Resume , رزومه" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
       <TopBody />
       <CenterBody />
-      <BottomBody/>
-      <AccessMe/>
+      <BottomBody />
+      <AccessMe />
     </div>
   )
 }

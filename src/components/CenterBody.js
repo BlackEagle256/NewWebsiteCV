@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import Image from "next/image";
 import clsx from "clsx";
-import { LanguageContext } from "../pages/context/LanguageContext";
+import { LanguageContext } from "../context/LanguageContext";
 
 export default function CenterBody() {
   const [showMore, setShowMore] = useState(false);
