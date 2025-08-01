@@ -17,7 +17,7 @@ export default function CenterBody() {
         isRtl ? "rtl text-right" : "ltr text-left"
       )}
     >
-      <main className="w-full max-w-7xl 2xl:max-w-[1600px]">
+      <main className="w-full max-w-7xl 2xl:max-w-[1600px] mb-16 lg:mb-0">
         <section className="bg-white rounded-xl shadow-lg flex flex-col md:flex-row overflow-hidden">
           <div className="w-full md:w-2/6 h-[300px] md:h-auto">
             <Image

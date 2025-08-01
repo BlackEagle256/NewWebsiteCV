@@ -139,7 +139,10 @@ export default function BottonBody() {
                 isRtl ? "text-right" : "text-left"
               )}
               sx={{
-                transform: (idx === 0 || idx === 2) ? "translateY(0)" : "translateY(30px)",
+                transform: {
+                  xs: "translateY(0)",
+                  lg: (idx === 0 || idx === 2) ? "translateY(0)" : "translateY(30px)",
+                },
                 transition: "transform 0.3s ease",
                 lineHeight: 1.7,
               }}

@@ -12,7 +12,7 @@ export default function index() {
       <Head>
         <title>خانه | سایت من</title>
         <meta name="description" content="سایت رزومه ای محمدحسین دادگسترنژاد" />
-        <meta name="keywords" content="آموزش, برنامه, برنامه نویسی, seo, nextjs, Resume , رزومه" />
+        <meta name="keywords" content="آموزش, برنامه, برنامه نویسی, seo, nextjs, Resume , رزومه, محمدحسین دادگسترنژاد, محمدحسین,دادگستر, دادگسترنژاد, دادگستر,Mohammmad Hosein, Dadgostar, Mohammad Hosein Dadgostar,Mohammad Hosein Dadgostar Nejhad, Dadgostar Nejhad" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
