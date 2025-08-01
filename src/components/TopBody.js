@@ -65,7 +65,7 @@ export default function TopBody() {
                 <div className="text-center">
                     <h2 className="text-2xl font-semibold text-orangeCustom mb-2">{t.hello}</h2>
                     <h2 className="text-2xl font-semibold text-orangeCustom mb-2">{t.name1}</h2>
-                    <h2 className="text-2xl font-semibold text-orangeCustom mb-6">{t.name2}</h2>
+                    <h2 className="text-2xl font-semibold text-orangeCustom mb-6">{t.name2 + " " + t.finish}</h2>
                     <p className="text-gray-600">{t.description}</p>
                 </div>
             </div>
