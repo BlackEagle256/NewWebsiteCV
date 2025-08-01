@@ -1,44 +1,46 @@
 import { Box } from "@mui/material";
 import React from "react";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { useContext } from "react";
+import { LanguageContext } from "../pages/context/LanguageContext";
+import clsx from "clsx";
 
 export default function BottonBody() {
+  const { t, dir } = useContext(LanguageContext);
+  const isRtl = dir === 'rtl';
+
   const boxes = [
     {
       icon: "fas fa-code",
-      title: "Frontend Development",
-      content:
-        "Experienced in building responsive and dynamic user interfaces using HTML, CSS, JavaScript, React.js, and Next.js. Skilled in TailwindCSS and Material UI for clean and modern designs.",
+      title: t.bottomBody.skills.frontend,
+      content: t.bottomBody.skills.frontendContent,
     },
     {
       icon: "fas fa-server",
-      title: "Backend Development",
-      content:
-        "Hands-on experience with backend development using Node.js (Express) and Django. Built scalable REST APIs with JWT authentication and database integration (MongoDB).",
+      title: t.bottomBody.skills.backend,
+      content: t.bottomBody.skills.backendContent,
     },
     {
       icon: "fas fa-project-diagram",
-      title: "Fullstack Projects",
-      content:
-        "Delivered fullstack web applications using modern stacks such as React + Node.js and Next.js + Django. Proficient in managing API communication, authentication flows, and admin panels.",
+      title: t.bottomBody.skills.fullstack,
+      content: t.bottomBody.skills.fullstackContent,
     },
     {
       icon: "fas fa-cogs",
-      title: "Tools & Technologies",
-      content:
-        "Version control with Git, REST API integration, responsive design, Postman, browser debugging tools, and familiarity with Docker and CI/CD workflows.",
+      title: t.bottomBody.skills.tools,
+      content: t.bottomBody.skills.toolsContent,
     },
   ];
 
   return (
-    <Box className="w-full px-4 sm:px-8 lg:px-20 py-12 mt-[-100px]">
+    <Box className={clsx("w-full px-4 sm:px-8 lg:px-20 lg:py-0 py-12 mt-[-100px] lg:mt-[-120px] lg:mb-[120px]", isRtl ? "rtl" : "ltr")}>
       <section className="flex flex-col lg:flex-row gap-12 lg:gap-8 max-w-7xl mx-auto items-start">
         {/* Experience & Education */}
         <Box className="flex-1 bg-white rounded-lg p-6 lg:p-4">
           {/* Work Experience */}
           <h2 className="flex items-center text-2xl lg:text-xl font-bold mb-6 text-gray-900">
             <i className="fas fa-briefcase mr-4 text-orange-500"></i>
-            <span>Work Experience</span>
+            <span>{t.bottomBody.workExperience}</span>
           </h2>
 
           <div className="relative pl-6 border-l-4 border-orange-500">
@@ -47,30 +49,43 @@ export default function BottonBody() {
                 <div className="w-1.5 h-1.5 bg-white rounded-full absolute top-[3px] left-[3px]"></div>
               </div>
 
-              <h3 className="text-lg lg:text-base font-semibold mb-1 text-gray-800">
-                Frontend / Fullstack Developer
+              <h3 className={clsx(
+                "font-semibold mb-2 text-gray-800",
+                isRtl ? "text-xl leading-relaxed" : "text-lg lg:text-base"
+              )}>
+                {t.bottomBody.frontendDeveloper}
               </h3>
 
-              <p className="text-gray-700 text-sm mb-1">
-                Nikta Andishan Royan Co.
+              <p className={clsx(
+                "mb-1 text-gray-700",
+                isRtl ? "text-base" : "text-sm"
+              )}>
+                {t.bottomBody.company}
               </p>
 
-              <p className="text-gray-500 text-xs mb-3">2023 – Present</p>
+              <p className={clsx(
+                "mb-4 text-gray-500",
+                isRtl ? "text-base" : "text-sm"
+              )}>
+                {t.bottomBody.period}
+              </p>
 
-              <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm lg:text-xs">
-                <li>Developed admin panel using React, TypeScript, and TailwindCSS.</li>
-                <li>Integrated backend services and optimized performance by 40%.</li>
-                <li>Designed and implemented role-based chat system with REST APIs.</li>
-                <li>Collaborated on frontend/backend integration using Django and Next.js.</li>
+              <ul className={clsx(
+                "list-disc list-inside text-gray-600",
+                isRtl ? "space-y-2 text-sm leading-relaxed" : "space-y-1 text-sm lg:text-xs"
+              )}>
+                {t.bottomBody.experienceItems.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </ul>
             </div>
           </div>
 
           {/* Education */}
-          <div className="mt-12 lg:mt-10">
+          <div className="mt-12 lg:mt-16">
             <h2 className="flex items-center text-2xl lg:text-xl font-bold mb-6 text-gray-900">
               <i className="fas fa-graduation-cap mr-4 text-orange-500"></i>
-              <span>Education</span>
+              <span>{t.bottomBody.education}</span>
             </h2>
 
             <div className="relative pl-6 border-l-4 border-orange-500">
@@ -79,17 +94,32 @@ export default function BottonBody() {
                   <div className="w-1.5 h-1.5 bg-white rounded-full absolute top-[3px] left-[3px]"></div>
                 </div>
 
-                <h3 className="text-lg lg:text-base font-semibold mb-1 text-gray-800">
-                  B.Sc. in Computer Engineering
+                <h3 className={clsx(
+                  "font-semibold mb-2 text-gray-800",
+                  isRtl ? "text-xl leading-relaxed" : "text-lg lg:text-base"
+                )}>
+                  {t.bottomBody.degree}
                 </h3>
 
-                <p className="text-gray-700 text-sm mb-1">
-                  National University of Skills (Technical & Vocational), Hamadan
+                <p className={clsx(
+                  "mb-1 text-gray-700",
+                  isRtl ? "text-base" : "text-sm"
+                )}>
+                  {t.bottomBody.university}
                 </p>
-                <p className="text-gray-500 text-xs mb-3">2021 – 2025</p>
 
-                <p className="text-gray-600 text-sm lg:text-xs">
-                  Gained solid foundation in computer science, algorithms, software development, and practical problem-solving through academic projects and coursework.
+                <p className={clsx(
+                  "mb-4 text-gray-500",
+                  isRtl ? "text-sm" : "text-xs"
+                )}>
+                  {t.bottomBody.educationPeriod}
+                </p>
+
+                <p className={clsx(
+                  "text-gray-600",
+                  isRtl ? "text-sm leading-relaxed" : "text-sm lg:text-xs"
+                )}>
+                  {t.bottomBody.educationDescription}
                 </p>
               </div>
             </div>
@@ -104,24 +134,40 @@ export default function BottonBody() {
           {boxes.map(({ icon, title, content }, idx) => (
             <Box
               key={idx}
-              className="bg-white rounded-xl shadow-md p-5 lg:p-4 flex flex-col transition-all hover:shadow-lg"
+              className={clsx(
+                "bg-white rounded-xl shadow-md p-6 flex flex-col transition-all hover:shadow-lg",
+                isRtl ? "text-right" : "text-left"
+              )}
               sx={{
-                transform: idx < 2 ? "translateY(-10px)" : "none",
+                transform: idx < 2 ? "translateY(-5px)" : "none",
                 transition: "transform 0.3s ease",
+                lineHeight: 1.7,
               }}
             >
               <Box
-                className="text-orange-500 mb-3 flex justify-start"
-                sx={{ fontSize: 30 }}
+                className="text-orange-500 mb-3 flex"
+                sx={{ fontSize: 30, justifyContent: isRtl ? "flex-end" : "flex-start" }}
               >
                 <i className={icon}></i>
               </Box>
 
-              <h3 className="text-base lg:text-sm font-semibold mb-2 text-gray-900">
+              <h3
+                className={clsx(
+                  "font-semibold mb-3",
+                  isRtl ? "text-base leading-relaxed" : "text-sm lg:text-sm"
+                )}
+              >
                 {title}
               </h3>
 
-              <p className="text-sm lg:text-xs text-gray-600">{content}</p>
+              <p
+                className={clsx(
+                  "text-gray-600",
+                  isRtl ? "text-sm leading-relaxed" : "text-sm lg:text-xs"
+                )}
+              >
+                {content}
+              </p>
             </Box>
           ))}
         </Box>

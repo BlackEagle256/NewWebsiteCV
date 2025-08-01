@@ -1,13 +1,19 @@
-import Image from 'next/image'
+import Image from 'next/image';
+import { useContext } from 'react';
+import { LanguageContext } from '../pages/context/LanguageContext';
 
 export default function TopBody() {
+    const { t, dir } = useContext(LanguageContext);
+
+    const isRtl = dir === 'rtl';
+
     return (
         <main className="relative w-full overflow-hidden bg-white lg:mb-36">
             <div className="hidden md:block relative w-full h-[600px]">
                 <div className="absolute inset-0 z-0 h-full w-full">
                     <svg
                         id="wave"
-                        className="rotate-180 transition duration-300 w-full h-full object-cover"
+                        className={`${isRtl ? 'scale-x-[-1]' : ''} rotate-180 transition duration-300 w-full h-full object-cover`}
                         viewBox="0 0 1440 490"
                         preserveAspectRatio="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -27,20 +33,18 @@ export default function TopBody() {
                     </svg>
                 </div>
 
-                <section className="relative z-20 px-16 pt-28 pb-[100px] max-w-xl">
-                    <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-2">Hello, I Am</h2>
-                    <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-2">Mohammad Hossein</h2>
-                    <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-6">Dadgostar Nejhad</h2>
-                    <p className="text-lg text-[#FCE0C5] mt-2 w-80">
-                        A FrontEnd Developer with over 3 years of experience in designing and implementing modern user interfaces.
-                    </p>
+                <section className={` ${isRtl ? 'text-right' : 'text-left'} relative z-20 px-16 pt-28 pb-[100px] max-w-xl`}>
+                    <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-2">{t.hello}</h2>
+                    <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-2">{t.name1}</h2>
+                    <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-6">{t.name2 + " " + t.finish}</h2>
+                    <p className="text-lg text-[#FCE0C5] mt-2 w-80">{t.description}</p>
                 </section>
 
-                <div className="absolute z-20 bottom-0 right-[5%] w-[280px] md:w-[320px] lg:w-[360px] xl:w-[350px] 2xl:w-[380px] 2xl:mr-10">
+                <div className={`${isRtl ? 'left-[5%]' : 'right-[5%]'} absolute z-20 bottom-0 w-[280px] md:w-[320px] lg:w-[360px] xl:w-[350px] 2xl:w-[380px] 2xl:mr-10`}>
                     <div className="relative aspect-square w-full">
                         <Image
                             src="/Prof2.png"
-                            alt="عکس محمد"
+                            alt="Profile Image"
                             fill
                             className="rounded-full border-4 border-white object-cover"
                         />
@@ -52,19 +56,17 @@ export default function TopBody() {
                 <div className="relative w-[200px] h-[200px] mb-8">
                     <Image
                         src="/Prof2.png"
-                        alt="عکس محمد"
+                        alt="Profile Image"
                         fill
                         className="rounded-full border-4 border-orangeCustom object-cover"
                     />
                 </div>
 
                 <div className="text-center">
-                    <h2 className="text-2xl font-semibold text-orangeCustom mb-2">Hello, I Am</h2>
-                    <h2 className="text-2xl font-semibold text-orangeCustom mb-2">Mohammad Hosein</h2>
-                    <h2 className="text-2xl font-semibold text-orangeCustom mb-6">Dadgostar Nejhad</h2>
-                    <p className="text-gray-600">
-                        A FrontEnd Developer with over 3 years of experience in designing and implementing modern user interfaces.
-                    </p>
+                    <h2 className="text-2xl font-semibold text-orangeCustom mb-2">{t.hello}</h2>
+                    <h2 className="text-2xl font-semibold text-orangeCustom mb-2">{t.name1}</h2>
+                    <h2 className="text-2xl font-semibold text-orangeCustom mb-6">{t.name2}</h2>
+                    <p className="text-gray-600">{t.description}</p>
                 </div>
             </div>
         </main>

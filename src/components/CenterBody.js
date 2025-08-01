@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Image from "next/image";
 import clsx from "clsx";
+import { LanguageContext } from "../pages/context/LanguageContext";
 
 export default function CenterBody() {
   const [showMore, setShowMore] = useState(false);
+  const { t, dir } = useContext(LanguageContext);
+  console.log("t", t)
+
+  const isRtl = dir === 'rtl';
 
   return (
-    <div className="min-h-screen bg-white text-gray-800 font-sans flex items-center justify-center px-4 py-12 md:mt-[-100px] lg:mb-36 lg:px-16">
+    <div
+      className={clsx(
+        "min-h-screen bg-white text-gray-800 font-sans flex items-center justify-center px-4 py-12 md:mt-[-100px] lg:mb-36 lg:px-16",
+        isRtl ? "rtl text-right" : "ltr text-left"
+      )}
+    >
       <main className="w-full max-w-7xl 2xl:max-w-[1600px]">
         <section className="bg-white rounded-xl shadow-lg flex flex-col md:flex-row overflow-hidden">
           <div className="w-full md:w-2/6 h-[300px] md:h-auto">
@@ -19,28 +29,15 @@ export default function CenterBody() {
             />
           </div>
 
-          <div className="w-full md:w-4/6 px-6 sm:px-10 md:px-14 lg:px-24 xl:px-32 py-8 md:py-12 flex flex-col justify-center text-left">
+          <div className="w-full md:w-4/6 px-6 sm:px-10 md:px-14 lg:px-24 xl:px-32 py-8 md:py-12 flex flex-col justify-center">
             <h2 className="text-xl sm:text-2xl lg:text-xl xl:text-2xl font-semibold">
-              I am Mohammad Hossein Dadgostar Nezhad,
+              {t.centerBody.title}
             </h2>
 
             <div className="mt-4 text-gray-600 space-y-4 text-sm sm:text-base lg:text-sm xl:text-base">
-              <p>
-                A frontend developer with over 3 years of experience in
-                designing and implementing modern user interfaces. My main
-                expertise lies in <strong>React.js</strong> and{" "}
-                <strong>TypeScript</strong>, with a strong focus on building
-                high-performance, user-friendly web applications.
-              </p>
+              <p>{t.centerBody.p1}</p>
+              <p>{t.centerBody.p2}</p>
 
-              <p>
-                I earned my degree in <strong>Computer Engineering</strong> from
-                the National Skills University (Technical & Vocational),
-                Hamadan. From the beginning of my journey, I was passionate
-                about programming and software development. I started as an
-                intern at <strong>Nikta Andishan Royan</strong>, and then worked
-                there for over a year as a frontend developer.
-              </p>
               <div
                 className={clsx(
                   "transition-all overflow-hidden duration-500 ease-in-out",
@@ -48,22 +45,8 @@ export default function CenterBody() {
                 )}
               >
                 <div className="space-y-4 mt-4">
-                  <p>
-                    During this time, I contributed to projects such as{" "}
-                    <strong>admin panel redesign</strong>,{" "}
-                    <strong>access-level management system</strong>, and{" "}
-                    <strong>user chat system setup</strong>. I’m also familiar
-                    with tools like <strong>Git</strong>, <strong>Redux</strong>, and{" "}
-                    <strong>REST APIs</strong>, and I’m always eager to learn
-                    new technologies.
-                  </p>
-
-                  <p>
-                    I’m passionate about UI optimization, solving technical
-                    challenges, and working with agile teams. My goal is to
-                    create software that’s not only beautiful but also fast and
-                    practical!
-                  </p>
+                  <p>{t.centerBody.p3}</p>
+                  <p>{t.centerBody.p4}</p>
                 </div>
               </div>
             </div>
@@ -76,7 +59,7 @@ export default function CenterBody() {
                 focus:ring-orange-400 focus:ring-opacity-75
                 active:bg-orange-700 w-max text-sm sm:text-base"
             >
-              {showMore ? "See Less..." : "See More..."}
+              {showMore ? t.centerBody.btnLess : t.centerBody.btnMore}
             </button>
           </div>
         </section>
