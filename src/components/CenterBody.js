@@ -12,7 +12,7 @@ export default function CenterBody() {
   return (
     <div
       className={clsx(
-        "min-h-screen bg-white text-gray-800 font-sans flex items-center justify-center px-4 py-12 md:mt-[-100px] lg:mb-36 lg:px-16",
+        "min-h-screen bg-white text-gray-800 font-sans flex items-center justify-center px-4 py-12 md:mt-[-300px] lg:mb-36 lg:px-16",
         isRtl ? "rtl text-right" : "ltr text-left"
       )}
     >

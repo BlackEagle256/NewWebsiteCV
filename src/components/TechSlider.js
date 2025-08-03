@@ -30,7 +30,7 @@ const TechSlider = () => {
             logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
         },
         {
-            name: "React",
+            name: "React.js",
             logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
         },
         {
