@@ -1,6 +1,7 @@
 import TopBody from '@/components/TopBody'
 import Header from '@/components/Header'
 import CenterBody from '@/components/CenterBody'
+import TechSlider from '@/components/TechSlider'
 import BottomBody from '@/components/BottomBody'
 import Head from 'next/head'
 import React from 'react'
@@ -19,6 +20,7 @@ export default function index() {
       <Header />
       <TopBody />
       <CenterBody />
+      <TechSlider />
       <BottomBody />
       <AccessMe />
     </div>
