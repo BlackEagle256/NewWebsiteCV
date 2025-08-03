@@ -29,6 +29,14 @@ export default function AccessMe() {
                             <i className="fab fa-linkedin-in text-xl"></i>
                         </a>
                         <a
+                            href="https://mhdadgostar.liara.run"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-white text-black p-3 hover:bg-gray-200 transition rounded-md"
+                        >
+                            <i className="fas fa-globe text-xl"></i>
+                        </a>
+                        <a
                             href="https://t.me/blackeagle256"
                             target="_blank"
                             rel="noopener noreferrer"

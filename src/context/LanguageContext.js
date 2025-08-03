@@ -109,7 +109,7 @@ const translations = {
         accessMe: {
             title: "در ارتباط باشید",
             contact: "اطلاعات تماس",
-            phone: "۰۹۳۶۶۶۰۶۵۳۶",
+            phone: "09366606536",
             email: "Mohammadhoseindadgostr@gmail.com",
             location: "تهران",
             copyright: "© ۲۰۲۵ - همه حقوق محفوظ است"
