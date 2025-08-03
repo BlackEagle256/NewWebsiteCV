@@ -55,7 +55,10 @@ const translations = {
             email: "Mohammadhoseindadgostr@gmail.com",
             location: "Tehran",
             copyright: "© 2025 - All Rights Reserved"
-        }
+        },
+        TechSlider: {
+            techno: "Technologies & Skills"
+        },
 
     },
     fa: {
@@ -110,7 +113,10 @@ const translations = {
             email: "Mohammadhoseindadgostr@gmail.com",
             location: "تهران",
             copyright: "© ۲۰۲۵ - همه حقوق محفوظ است"
-        }
+        },
+        TechSlider: {
+            techno: "تکنولوژی‌های تسلط‌ یافته"
+        },
 
     }
 };

@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import { LanguageContext } from "../context/LanguageContext";
 
 const TechSlider = () => {
+    const { t, dir } = useContext(LanguageContext);
+
     const techItems = [
         {
             name: "Next.js",
@@ -53,50 +59,43 @@ const TechSlider = () => {
         },
     ];
 
-    const duplicatedItems = [...techItems, ...techItems];
-
     return (
-        <div className="bg-white text-gray-800 font-sans flex items-center justify-center px-4 py-12 md:mt-[-100px] lg:mb-36 lg:px-16 overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center">
-                <h2 className="text-xl font-bold text-gray-800 z-10 bg-white px-4 py-2 rounded-lg shadow-sm">
-                    تکنولوژی‌های مورد استفاده
-                </h2>
-            </div>
-
-            <div className="animate-slide flex">
-                {duplicatedItems.map((item, index) => (
-                    <div
-                        key={`${item.name}-${index}`}
-                        className="flex-shrink-0 mx-8 flex flex-col items-center"
-                    >
-                        <div className="w-16 h-16 relative">
-                            <Image
-                                src={item.logo}
-                                alt={item.name}
-                                fill
-                                className="object-contain"
-                            />
+        <div
+            className="bg-white text-gray-800 font-sans flex items-center justify-center px-4 py-10 md:my-[-200px] lg:mb-36 lg:px-16 overflow-hidden"
+            dir={dir}
+        >
+            <h2 className="text-xl font-bold text-gray-800 z-10 bg-white px-4 py-2 rounded-lg shadow-sm">
+                {t.TechSlider.techno}
+            </h2>
+            <Swiper
+                key={dir}
+                modules={[Autoplay]}
+                spaceBetween={10}
+                slidesPerView={10}
+                loop={true}
+                autoplay={{
+                    delay: 0,
+                    disableOnInteraction: false,
+                }}
+                speed={2000}
+                rtl={dir === "rtl"}
+            >
+                {techItems.map((item, index) => (
+                    <SwiperSlide key={index}>
+                        <div className="flex flex-col items-center justify-center">
+                            <div className="w-16 h-16 relative">
+                                <Image
+                                    src={item.logo}
+                                    alt={item.name}
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                            <span className="mt-2 text-sm text-gray-600">{item.name}</span>
                         </div>
-                        <span className="mt-2 text-sm text-gray-600">{item.name}</span>
-                    </div>
+                    </SwiperSlide>
                 ))}
-            </div>
-
-            <style jsx>{`
-        @keyframes slide {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-slide {
-          animation: slide 20s linear infinite;
-          display: flex;
-          width: max-content;
-        }
-      `}</style>
+            </Swiper>
         </div>
     );
 };
