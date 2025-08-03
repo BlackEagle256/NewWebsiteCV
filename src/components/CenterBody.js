@@ -6,7 +6,6 @@ import { LanguageContext } from "../context/LanguageContext";
 export default function CenterBody() {
   const [showMore, setShowMore] = useState(false);
   const { t, dir } = useContext(LanguageContext);
-  console.log("t", t)
 
   const isRtl = dir === 'rtl';
 

@@ -81,9 +81,9 @@ const TechSlider = () => {
                     rtl={dir === "rtl"}
                     spaceBetween={16}
                     breakpoints={{
-                        0: { slidesPerView: 2 },
-                        480: { slidesPerView: 4 },
-                        640: { slidesPerView: 4 },
+                        0: { slidesPerView: 4 },
+                        480: { slidesPerView: 5 },
+                        640: { slidesPerView: 5 },
                         768: { slidesPerView: 5 },
                         1024: { slidesPerView: 6 },
                         1280: { slidesPerView: 9 },
