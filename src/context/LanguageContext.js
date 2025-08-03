@@ -15,7 +15,7 @@ const translations = {
         centerBody: {
             title: "I am Mohammad Hossein Dadgostar Nezhad,",
             p1: `A frontend developer with over 3 years of experience in designing and implementing modern user interfaces. My main expertise lies in React.js and TypeScript, with a strong focus on building high-performance, user-friendly web applications.`,
-            p2: `I earned my degree in Computer Engineering from the National Skills University (Technical & Vocational), Hamadan. From the beginning of my journey, I was passionate about programming and software development. I started as an intern at Nikta Andishan Royan, and then worked there for over a year as a frontend developer.`,
+            p2: `I earned my degree in Computer Engineering from the National Skills University (Technical & Vocational), Hamadan. From the beginning of my journey, I was passionate about programming and software development. I started as an intern at Nikta Andishan Royan, and then worked there for over Three year as a frontend developer.`,
             p3: `During this time, I contributed to projects such as admin panel redesign, access-level management system, and user chat system setup. I’m also familiar with tools like Git, Redux, and REST APIs, and I’m always eager to learn new technologies.`,
             p4: `I’m passionate about UI optimization, solving technical challenges, and working with agile teams. My goal is to create software that’s not only beautiful but also fast and practical!`,
             btnMore: "See More...",
@@ -70,7 +70,7 @@ const translations = {
         centerBody: {
             title: "من محمدحسین دادگستر نژاد هستم،",
             p1: `یک توسعه‌دهنده فرانت‌اند با بیش از ۳ سال تجربه در طراحی و پیاده‌سازی رابط‌های کاربری مدرن. تخصص اصلی من در React.js و TypeScript است و تمرکز من بر ساخت اپلیکیشن‌های سریع و کاربرپسند است.`,
-            p2: `مدرک مهندسی کامپیوتر را از دانشگاه مهارت‌های ملی (فنی و حرفه‌ای) همدان گرفتم. از ابتدا به برنامه‌نویسی و توسعه نرم‌افزار علاقه‌مند بودم. ابتدا به‌عنوان کارآموز در شرکت نیکتا اندیشان رویان فعالیت کردم و سپس بیش از یک سال به‌عنوان توسعه‌دهنده فرانت‌اند در آنجا مشغول به کار بودم.`,
+            p2: `مدرک مهندسی کامپیوتر را از دانشگاه مهارت‌های ملی (فنی و حرفه‌ای) همدان گرفتم. از ابتدا به برنامه‌نویسی و توسعه نرم‌افزار علاقه‌مند بودم. ابتدا به‌عنوان کارآموز در شرکت نیکتا اندیشان رویان فعالیت کردم و سپس بیش از سه سال به‌عنوان توسعه‌دهنده فرانت‌اند در آنجا مشغول به کار بودم.`,
             p3: `در این مدت در پروژه‌هایی مانند بازطراحی پنل ادمین، سیستم مدیریت سطح دسترسی و راه‌اندازی سیستم چت کاربران همکاری داشتم. همچنین با ابزارهایی مانند Git، Redux و APIهای REST آشنایی دارم و همیشه مشتاق یادگیری تکنولوژی‌های جدید هستم.`,
             p4: `من بهینه‌سازی رابط کاربری، حل چالش‌های فنی و کار در تیم‌های چابک را دوست دارم. هدفم ساخت نرم‌افزارهایی است که هم زیبا باشند و هم سریع و کاربردی.`,
             btnMore: "بیشتر بخوانید...",
