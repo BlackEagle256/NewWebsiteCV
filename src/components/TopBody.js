@@ -1,73 +1,143 @@
 import Image from 'next/image';
 import { useContext } from 'react';
 import { LanguageContext } from '../context/LanguageContext';
+import clsx from 'clsx';
+import { FaDownload, FaArrowDown } from 'react-icons/fa';
 
 export default function TopBody() {
     const { t, dir } = useContext(LanguageContext);
-
     const isRtl = dir === 'rtl';
 
+    const stats = [
+        { value: '3+', label: t.stats?.experience || 'Years Experience' },
+        { value: '15+', label: t.stats?.projects || 'Projects Completed' },
+        { value: '10+', label: t.stats?.technologies || 'Technologies' },
+    ];
+
     return (
-        <main className="relative w-full overflow-hidden bg-white lg:mb-36">
-            <div className="hidden md:block relative w-full h-[600px]">
-                <div className="absolute inset-0 z-0 h-full w-full">
-                    <svg
-                        id="wave"
-                        className={`${isRtl ? 'scale-x-[-1]' : ''} rotate-180 transition duration-300 w-full h-full object-cover`}
-                        viewBox="0 0 1440 490"
-                        preserveAspectRatio="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            fill="#F18519"
-                            d="M0,294L60,310.3C120,327,240,359,360,343C480,327,600,261,720,204.2C840,147,960,98,
-                            1080,73.5C1200,49,1320,49,1440,73.5C1560,98,1680,147,1800,204.2C1920,261,2040,327,
-                            2160,318.5C2280,310,2400,229,2520,171.5C2640,114,2760,82,2880,89.8C3000,98,3120,147,
-                            3240,212.3C3360,278,3480,359,3600,351.2C3720,343,3840,245,3960,196C4080,147,4200,147,
-                            4320,147C4440,147,4560,147,4680,138.8C4800,131,4920,114,5040,138.8C5160,163,5280,229,
-                            5400,277.7C5520,327,5640,359,5760,359.3C5880,359,6000,327,6120,294C6240,261,6360,229,
-                            6480,196C6600,163,6720,131,6840,155.2C6960,180,7080,261,7200,285.8C7320,310,7440,278,
-                            7560,253.2C7680,229,7800,212,7920,187.8C8040,163,8160,131,8280,114.3C8400,98,8520,98,
-                            8580,98L8640,98L8640,490L0,490Z"
-                        />
-                    </svg>
-                </div>
+        <main className={clsx("relative min-h-screen overflow-hidden", isRtl && "rtl")} id="about">
+            {/* Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-slate-800" />
 
-                <section className={` ${isRtl ? 'text-right' : 'text-left'} relative z-20 px-16 pt-28 pb-[100px] max-w-xl`}>
-                    <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-2">{t.hello}</h2>
-                    <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-2">{t.name1}</h2>
-                    <h2 className="text-3xl lg:text-4xl font-semibold text-white mb-6">{t.name2 + " " + t.finish}</h2>
-                    <p className="text-lg text-[#FCE0C5] mt-2 w-80">{t.description}</p>
-                </section>
+            {/* Decorative Elements */}
+            <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute top-20 right-10 w-72 h-72 bg-gold-400/10 rounded-full blur-3xl animate-float" />
+                <div className="absolute bottom-20 left-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/5 rounded-full" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/5 rounded-full" />
+            </div>
 
-                <div className={`${isRtl ? 'left-[5%]' : 'right-[5%]'} absolute z-20 bottom-0 w-[280px] md:w-[320px] lg:w-[360px] xl:w-[350px] 2xl:w-[380px] 2xl:mr-10`}>
-                    <div className="relative aspect-square w-full">
-                        <Image
-                            src="/Prof2.png"
-                            alt="Profile Image"
-                            fill
-                            className="rounded-full border-4 border-white object-cover"
-                        />
+            {/* Grid Pattern */}
+            <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-5" />
+
+            {/* Content */}
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 min-h-screen flex items-center">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full pt-24 pb-16">
+
+                    {/* Text Content */}
+                    <div className={clsx("space-y-8", isRtl ? "text-right" : "text-left")}>
+
+                        {/* Badge */}
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 animate-fade-in">
+                            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                            <span className="text-sm text-gray-300">{t.available || 'Available for work'}</span>
+                        </div>
+
+                        {/* Heading */}
+                        <div className="space-y-4 animate-slide-up">
+                            <p className="text-gold-400 font-medium tracking-widest uppercase text-sm">
+                                {t.greeting || 'Hello, I am'}
+                            </p>
+                            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight">
+                                <span className="block">{t.name1}</span>
+                                <span className="block bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500 bg-clip-text text-transparent">
+                                    {t.name2}
+                                </span>
+                            </h1>
+                            <p className="text-xl sm:text-2xl text-gray-400 font-light">
+                                {t.title || 'Full-Stack Developer'}
+                            </p>
+                        </div>
+
+                        {/* Description */}
+                        <p className="text-gray-400 text-lg leading-relaxed max-w-lg animate-slide-up" style={{ animationDelay: '0.2s' }}>
+                            {t.description}
+                        </p>
+
+                        {/* CTA Buttons */}
+                        <div className={clsx(
+                            "flex flex-wrap gap-4 animate-slide-up",
+                            isRtl ? "justify-end" : "justify-start"
+                        )} style={{ animationDelay: '0.4s' }}>
+                            <a
+                                href="/resume.pdf"
+                                download
+                                className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gold-400 to-gold-500 text-navy-900 font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-glow hover:scale-105"
+                            >
+                                <FaDownload className="transition-transform group-hover:-translate-y-1" />
+                                <span>{t.downloadCV || 'Download CV'}</span>
+                            </a>
+                            <a
+                                href="#contact"
+                                className="inline-flex items-center gap-3 px-8 py-4 border-2 border-white/20 text-white font-medium rounded-xl hover:bg-white/10 transition-all duration-300 hover:border-white/40"
+                            >
+                                <span>{t.contactMe || 'Contact Me'}</span>
+                            </a>
+                        </div>
+
+                        {/* Stats */}
+                        <div className={clsx(
+                            "flex gap-8 pt-8 border-t border-white/10 animate-slide-up",
+                            isRtl && "flex-row-reverse"
+                        )} style={{ animationDelay: '0.6s' }}>
+                            {stats.map((stat, i) => (
+                                <div key={i} className={clsx("text-center", isRtl ? "text-right" : "text-left")}>
+                                    <p className="text-3xl sm:text-4xl font-bold text-white">{stat.value}</p>
+                                    <p className="text-sm text-gray-500 mt-1">{stat.label}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Profile Image */}
+                    <div className="relative flex justify-center lg:justify-end animate-fade-in">
+                        <div className="relative">
+                            {/* Glow Effect */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-gold-400/30 to-blue-500/30 rounded-full blur-3xl scale-110" />
+
+                            {/* Main Image Container */}
+                            <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 xl:w-[420px] xl:h-[420px]">
+                                {/* Rotating Border */}
+                                <div className="absolute inset-0 rounded-full border-2 border-dashed border-gold-400/30 animate-spin" style={{ animationDuration: '30s' }} />
+
+                                {/* Image */}
+                                <div className="absolute inset-4 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
+                                    <Image
+                                        src="/Prof2.png"
+                                        alt="Profile"
+                                        fill
+                                        className="object-cover"
+                                        priority
+                                    />
+                                </div>
+
+                                {/* Floating Elements */}
+                                <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/10 animate-float shadow-lg">
+                                    <span className="text-3xl">💻</span>
+                                </div>
+                                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gold-400 rounded-2xl flex items-center justify-center animate-float shadow-lg" style={{ animationDelay: '1s' }}>
+                                    <span className="text-2xl">⚡</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div className="md:hidden flex flex-col items-center pt-12 pb-16 px-6">
-                <div className="relative w-[200px] h-[200px] mb-8">
-                    <Image
-                        src="/Prof2.png"
-                        alt="Profile Image"
-                        fill
-                        className="rounded-full border-4 border-orangeCustom object-cover"
-                    />
-                </div>
-
-                <div className="text-center">
-                    <h2 className="text-2xl font-semibold text-orangeCustom mb-2">{t.hello}</h2>
-                    <h2 className="text-2xl font-semibold text-orangeCustom mb-2">{t.name1}</h2>
-                    <h2 className="text-2xl font-semibold text-orangeCustom mb-6">{t.name2 + " " + t.finish}</h2>
-                    <p className="text-gray-600">{t.description}</p>
-                </div>
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+                <span className="text-white/50 text-xs tracking-widest uppercase">{t.scroll || 'Scroll'}</span>
+                <FaArrowDown className="text-white/50" />
             </div>
         </main>
     );

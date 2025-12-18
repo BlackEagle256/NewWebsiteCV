@@ -1,14 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: 'IRANSansWebFaNum';
-    src: url('/fonts/IRANSansWebFaNum.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+* {
+  scroll-behavior: smooth;
 }
 
-.shadow-top {
-  box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.3);
+body {
+  font-family: 'Inter', 'Vazirmatn', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[dir="rtl"] body {
+  font-family: 'Vazirmatn', 'Inter', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #fbbf24, #f59e0b);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #f59e0b, #d97706);
+}
+
+/* Selection */
+::selection {
+  background: rgba(251, 191, 36, 0.3);
+  color: #0f172a;
+}
+
+/* Animations */
+@layer utilities {
+  .animation-delay-150 {
+    animation-delay: 150ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Swiper customization */
+.swiper-wrapper {
+  transition-timing-function: linear !important;
 }
